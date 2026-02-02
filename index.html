@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcos "BK" | Desenvolvedor Web</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container nav-container">
+      <a href="#home" class="logo">&lt;BK /&gt;</a>
+      <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container section-pad">
+      <div class="hero-content">
+        <h1>Desenvolvedor Web focado em <span class="highlight">sistemas reais</span></h1>
+        <p class="subtitle">Crio aplicações web completas, com banco de dados, autenticação e foco em resolver problemas de negócio.</p>
+        <div class="cta-group">
+          <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+          <a href="#contato" class="btn btn-outline">Falar Comigo</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="code-header">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <pre><code id="typewriter"></code><span class="cursor">|</span></pre>
+      </div>
+    </section>
+
+    <section id="sobre" class="container section-pad">
+      <h2 class="section-title">Sobre Mim</h2>
+      <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p class="text-lg">
+          Sou desenvolvedor web com experiência prática em projetos em produção real. Trabalho na criação de sistemas completos, integração com banco de dados e soluções sob medida, sempre com foco em funcionalidade, organização e resultado. Não apenas escrevo código, construo ferramentas que clientes utilizam no dia a dia.
+        </p>
+
+        <div class="grid-cards" style="margin-top: 40px; text-align: left;">
+          <div class="card">
+            <i class="fas fa-laptop-code card-icon"></i>
+            <h3>Sistemas Web</h3>
+            <p>Desenvolvimento de aplicações completas, dashboards e painéis administrativos.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-database card-icon"></i>
+            <h3>Backend & BD</h3>
+            <p>Modelagem de dados (SQL), autenticação segura e lógica de servidor (PHP/Node).</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-check-circle card-icon"></i>
+            <h3>Foco em Resultado</h3>
+            <p>Soluções pensadas para resolver o problema do negócio, com código limpo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="container section-pad">
+      <h2 class="section-title">Projetos Realizados</h2>
+
+      <div class="grid-cards">
+        <div class="card project-card">
+          <div class="card-header">
+            <h3>Gestão Financeira</h3>
+            <span class="status-badge">Em Uso Real</span>
+          </div>
+          <p><strong>O que é:</strong> Sistema web para controle financeiro, desenvolvido e utilizado por cliente real.</p>
+          <p class="desc-full">Sistema completo para organização de receitas e despesas, com dados armazenados em banco de dados e interface web intuitiva.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JS</span>
+            <span class="tech-tag">Supabase</span>
+          </div>
+        </div>
+
+        <div class="card project-card">
+          <div class="card-header">
+            <h3>Navegação Dinâmica</h3>
+          </div>
+          <p><strong>O que é:</strong> Aplicação web com navegação fluida sem recarregamento (SPA like).</p>
+          <p class="desc-full">Sistema desenvolvido para carregar apenas partes específicas da página, mantendo o header estático. Performance otimizada.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">AJAX</span>
+            <span class="tech-tag">jQuery</span>
+            <span class="tech-tag">PHP</span>
+          </div>
+        </div>
+
+        <div class="card project-card">
+          <div class="card-header">
+            <h3>Conteúdo Dinâmico</h3>
+          </div>
+          <p><strong>O que é:</strong> Sistema educacional/conteúdo gerenciado via banco de dados.</p>
+          <p class="desc-full">Aplicação onde todo o conteúdo exibido é puxado dinamicamente do banco MySQL, permitindo gestão fácil.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="container section-pad">
+      <div class="contact-wrapper">
+        <h2 class="section-title">Vamos conversar?</h2>
+        <p class="contact-text">Estou disponível para novos projetos e oportunidades.</p>
+
+        <div class="social-icons">
+          <a href="https://wa.me/5591992531885" target="_blank" class="social-btn whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/marcos-gabriel-rodrigues-ba%C3%ADa-0181022a5/" target="_blank" class="social-btn linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/MarcosGDev-00" target="_blank" class="social-btn github">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/bk.marcosr?igsh=MXVvbHpxczR4a2o0cg==" target="_blank" class="social-btn instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Marcos Gabriel (BK). Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
