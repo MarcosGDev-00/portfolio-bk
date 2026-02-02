@@ -1,259 +1,469 @@
 /* --- RESET & VARIÁVEIS (SOFT DARK MINIMAL) --- */
 :root {
-    /* Paleta Monocromática Suave */
-    --bg-main: #080808;       /* Preto profundo, mas não absoluto */
-    --bg-surface: #121212;    /* Cinza muito escuro para elementos */
-    --bg-highlight: #1c1c1c;  /* Hover suave */
-    
-    --text-primary: #ffffff;
-    --text-secondary: #888888; /* Cinza médio, elegante */
-    
-    --accent: #ffffff;        /* Destaques em branco puro */
-    
-    --border-invisible: rgba(255, 255, 255, 0.03); /* Linha quase imperceptível */
-    
-    /* Arredondamento Global */
-    --radius-btn: 50px;       /* Botões estilo "Pílula" */
-    --radius-card: 20px;      /* Cards bem arredondados */
-    
-    --font-main: 'Inter', sans-serif;
-    --font-code: 'Fira Code', monospace;
-    --header-height: 70px;
+  /* Paleta Monocromática Suave */
+  --bg-main: #080808; /* Preto profundo, mas não absoluto */
+  --bg-surface: #121212; /* Cinza muito escuro para elementos */
+  --bg-highlight: #1c1c1c; /* Hover suave */
+
+  --text-primary: #ffffff;
+  --text-secondary: #888888; /* Cinza médio, elegante */
+
+  --accent: #ffffff; /* Destaques em branco puro */
+
+  --border-invisible: rgba(255, 255, 255, 0.03); /* Linha quase imperceptível */
+
+  /* Arredondamento Global */
+  --radius-btn: 50px; /* Botões estilo "Pílula" */
+  --radius-card: 20px; /* Cards bem arredondados */
+
+  --font-main: 'Inter', sans-serif;
+  --font-code: 'Fira Code', monospace;
+  --header-height: 70px;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-    font-family: var(--font-main);
-    background-color: var(--bg-main);
-    color: var(--text-primary);
-    line-height: 1.6;
-    /* Removemos o grid de fundo para ficar mais limpo ainda */
+  font-family: var(--font-main);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  /* Removemos o grid de fundo para ficar mais limpo ainda */
 }
 
 /* --- UTILITÁRIOS --- */
-.container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.section-pad { padding: 120px 0; scroll-margin-top: var(--header-height); }
-.highlight { color: var(--text-primary); font-weight: 700; } /* Destaque sutil apenas com peso */
-.text-lg { font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300; }
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section-pad {
+  padding: 120px 0;
+  scroll-margin-top: var(--header-height);
+}
+.highlight {
+  color: var(--text-primary);
+  font-weight: 700;
+} /* Destaque sutil apenas com peso */
+.text-lg {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-weight: 300;
+}
 
 /* --- HEADER CLEAN --- */
 header {
-    background-color: rgba(8, 8, 8, 0.8); /* Fundo semi-transparente */
-    backdrop-filter: blur(20px);          /* Blur forte para elegância */
-    border-bottom: 1px solid var(--border-invisible); /* Linha quase invisível */
-    height: var(--header-height);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: rgba(8, 8, 8, 0.8); /* Fundo semi-transparente */
+  backdrop-filter: blur(20px); /* Blur forte para elegância */
+  border-bottom: 1px solid var(--border-invisible); /* Linha quase invisível */
+  height: var(--header-height);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.nav-container { display: flex; justify-content: space-between; align-items: center; height: 100%; }
-
-.logo { 
-    font-size: 1.4rem; 
-    font-weight: 800; 
-    color: var(--text-primary); 
-    letter-spacing: -0.5px;
-    border: none; /* Sem borda */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
-.nav-links { display: flex; gap: 40px; }
-.nav-link { 
-    font-size: 0.9rem; 
-    font-weight: 500; 
-    color: var(--text-secondary); 
-    transition: 0.3s; 
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  border: none;
+  text-decoration: none;
 }
 
-.nav-link:hover, .nav-link.active { 
-    color: var(--text-primary); 
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-primary);
 }
 
 /* --- HERO & TYPEWRITER --- */
 .hero {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; min-height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  min-height: 85vh;
 }
 
-.hero-content h1 { 
-    font-size: 3.5rem; 
-    line-height: 1.1; 
-    margin-bottom: 1.5rem; 
-    font-weight: 700; 
-    letter-spacing: -1px;
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
-.hero-content .subtitle { 
-    font-size: 1.2rem; 
-    margin-bottom: 2.5rem; 
-    max-width: 480px; 
-    color: var(--text-secondary);
-    font-weight: 300; 
+.hero-content .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  color: var(--text-secondary);
+  font-weight: 300;
 }
 
-.cta-group { display: flex; gap: 15px; }
+.cta-group {
+  display: flex;
+  gap: 15px;
+}
 
 /* Botões Arredondados (Pill Shape) */
 .btn {
-    padding: 16px 36px; 
-    border-radius: var(--radius-btn); /* Totalmente arredondado */
-    font-weight: 600; 
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-    text-decoration: none; 
-    display: inline-block;
-    font-size: 0.95rem;
+  padding: 16px 36px;
+  border-radius: var(--radius-btn); /* Totalmente arredondado */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.95rem;
 }
 
 /* Botão Branco Sólido */
-.btn-primary { 
-    background: var(--accent); 
-    color: #000; 
-    border: 1px solid var(--accent);
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+  border: 1px solid var(--accent);
 }
-.btn-primary:hover { 
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15); /* Sombra suave branca */
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15); /* Sombra suave branca */
 }
 
 /* Botão Transparente Clean */
-.btn-outline { 
-    background: transparent; 
-    border: 1px solid rgba(255,255,255,0.2); /* Borda muito sutil */
-    color: var(--text-primary); 
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda muito sutil */
+  color: var(--text-primary);
 }
-.btn-outline:hover { 
-    border-color: var(--text-primary);
-    background: rgba(255,255,255,0.05);
+.btn-outline:hover {
+  border-color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* Editor de Código Arredondado */
-.hero-visual {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-invisible);
-    border-radius: var(--radius-card); /* Canto arredondado */
-    padding: 30px;
-    font-family: var(--font-code); font-size: 0.9rem; line-height: 1.7;
-    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5); /* Sombra escura difusa */
+/* --- COMPOSIÇÃO DA HERO (FOTO + CÓDIGO LADO A LADO) --- */
+
+/* O Container agora alinha os itens lado a lado */
+/* --- COMPOSIÇÃO DA HERO (FOTO + CÓDIGO) --- */
+
+/* O Container que segura tudo */
+.hero-visual-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura fixa para garantir o layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.code-header { display: flex; gap: 10px; margin-bottom: 25px; }
-.dot { width: 10px; height: 10px; border-radius: 50%; background: #333; } /* Dots discretos */
+/* 1. O Efeito de Luz (Glow) atrás de você */
+.glow-effect {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    top: 10%;
+}
 
-#typewriter { color: var(--text-secondary); }
+/* 2. Sua Foto */
+.profile-photo {
+    height: 100%; /* Ocupa a altura do container */
+    max-height: 500px;
+    object-fit: contain;
+    position: relative;
+    bottom: 70px;
+    z-index: 1; /* Fica na frente do glow */
+
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3)) 
+            drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
+    
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/* 3. O Card de Código (Flutuante) */
+.code-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;       /* Joga levemente para a esquerda */
+    z-index: 2;    /* Fica na frente da foto */
+    
+    background: rgba(18, 18, 18, 0.95); /* Fundo bem escuro */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 20px;
+    
+    width: 310px; /* Tamanho do editor */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra forte para separar da foto */
+    
+    /* Fonte do código */
+    font-family: var(--font-code);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    .hero-visual-wrapper {
+        height: 400px;
+        margin-top: 20px;
+    }
+    
+    .profile-photo {
+        max-height: 350px;
+    }
+
+    .code-card {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza o código no mobile */
+        width: 90%; /* Código ocupa largura quase total no mobile */
+    }
+}
+
+.code-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+} /* Dots discretos */
+
+#typewriter {
+  color: var(--text-secondary);
+}
 .cursor {
-    display: inline-block; width: 8px; height: 14px; background-color: var(--text-secondary);
-    animation: blink 1s step-end infinite; vertical-align: middle; margin-left: 2px;
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background-color: var(--text-secondary);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  margin-left: 2px;
 }
-@keyframes blink { 50% { opacity: 0; } }
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 
 /* --- SEÇÕES & CARDS --- */
-.section-title { 
-    text-align: center; 
-    font-size: 2rem; 
-    margin-bottom: 5rem; 
-    font-weight: 600;
-    letter-spacing: -0.5px;
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 /* Removemos o sublinhado do título para ficar mais limpo */
-.section-title::after { display: none; }
+.section-title::after {
+  display: none;
+}
 
-.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
 
 .card {
-    background-color: var(--bg-surface);
-    padding: 40px; 
-    border-radius: var(--radius-card); /* Card arredondado */
-    border: 1px solid transparent; /* Sem borda visível inicialmente */
-    transition: all 0.4s ease; 
+  background-color: var(--bg-surface);
+  padding: 40px;
+  border-radius: var(--radius-card); /* Card arredondado */
+  border: 1px solid transparent; /* Sem borda visível inicialmente */
+  transition: all 0.4s ease;
 }
 
 /* Hover Minimalista: Apenas clareia o fundo levemente */
-.card:hover { 
-    background-color: var(--bg-highlight);
-    transform: translateY(-5px);
+.card:hover {
+  background-color: var(--bg-highlight);
+  transform: translateY(-5px);
 }
 
-.card-icon { font-size: 1.8rem; color: var(--text-primary); margin-bottom: 20px; }
+.card-icon {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
 
 /* Projetos */
-.project-card .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-.project-card h3 { color: var(--text-primary); font-size: 1.25rem; font-weight: 600; }
-.desc-full { font-size: 0.95rem; margin-top: 15px; color: var(--text-secondary); }
+.project-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.project-card h3 {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.desc-full {
+  font-size: 0.95rem;
+  margin-top: 15px;
+  color: var(--text-secondary);
+}
 
 /* Badges e Tags Arredondadas */
 .status-badge {
-    font-size: 0.7rem; 
-    background: rgba(255,255,255,0.1); /* Fundo sutil */
-    color: #fff; 
-    padding: 5px 12px; 
-    border-radius: 20px; /* Badge redonda */
-    font-weight: 500;
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.1); /* Fundo sutil */
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px; /* Badge redonda */
+  font-weight: 500;
 }
 
-.tech-stack { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; }
+.tech-stack {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .tech-tag {
-    font-size: 0.8rem; 
-    color: var(--text-secondary);
-    background: rgba(255,255,255,0.03);
-    padding: 8px 16px; 
-    border-radius: 20px; /* Tag redonda */
-    transition: 0.3s;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 16px;
+  border-radius: 20px; /* Tag redonda */
+  transition: 0.3s;
 }
-.card:hover .tech-tag { background: rgba(255,255,255,0.08); color: var(--text-primary); }
-
+.card:hover .tech-tag {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+}
 
 /* --- SOCIAL ICONS CLEAN --- */
-.contact-wrapper { text-align: center; max-width: 600px; margin: 0 auto; }
-.contact-text { font-size: 1.2rem; margin-bottom: 3rem; color: var(--text-secondary); }
-.social-icons { display: flex; justify-content: center; gap: 30px; margin-top: 20px; }
+.contact-wrapper {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-text {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: var(--text-secondary);
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
 
 .social-btn {
-    width: 50px; height: 50px; 
-    border-radius: 50%;
-    /* Sem borda, sem fundo inicial */
-    background: transparent; border: none;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.6rem; 
-    color: var(--text-secondary); /* Cinza inicial */
-    transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* Sem borda, sem fundo inicial */
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--text-secondary); /* Cinza inicial */
+  transition: all 0.3s ease;
 }
 
 /* Hover: Uma bolha suave aparece e o ícone fica branco */
-.social-btn:hover { 
-    background: rgba(255, 255, 255, 0.1); 
-    color: #fff; 
-    transform: scale(1.1);
+.social-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transform: scale(1.1);
 }
 
 /* --- FOOTER --- */
-footer { 
-    text-align: center; 
-    padding: 50px 0; 
-    border-top: 1px solid var(--border-invisible); 
-    color: #444; /* Bem discreto */
-    font-size: 0.85rem; 
+footer {
+  text-align: center;
+  padding: 50px 0;
+  border-top: 1px solid var(--border-invisible);
+  color: #444; /* Bem discreto */
+  font-size: 0.85rem;
 }
 
 /* --- RESPONSIVO --- */
-.mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-primary); }
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
 
 @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; text-align: center; gap: 50px; padding-top: 40px; }
-    .hero-content h1 { font-size: 2.5rem; }
-    .cta-group { justify-content: center; }
-    
-    .mobile-menu-btn { display: block; }
-    .nav-links {
-        display: none; position: absolute; top: var(--header-height); left: 0; width: 100%;
-        background: var(--bg-main); flex-direction: column; padding: 0;
-        border-bottom: 1px solid var(--border-invisible);
-    }
-    .nav-links.active { display: flex; }
-    .nav-link { 
-        font-size: 1.1rem; padding: 25px 0; text-align: center; 
-        border-bottom: 1px solid rgba(255,255,255,0.03); width: 100%;
-    }
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 50px;
+    padding-top: 40px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .cta-group {
+    justify-content: center;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background: var(--bg-main);
+    flex-direction: column;
+    padding: 0;
+    border-bottom: 1px solid var(--border-invisible);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    width: 100%;
+  }
 }
